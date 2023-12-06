@@ -8,19 +8,25 @@ console.log('Numero del pc', pcNumber, typeof pcNumber);
 const userNumber = Math.floor(Math.random() * 6 + 1);
 console.log('Numero dell\'utente', userNumber, typeof userNumber);
 
-const dado1 = document.querySelector('.dado-pc');
-const dado2 = document.querySelector('.dado-utente')
-dado1.innerHTML = pcNumber;
-dado2.innerHTML = userNumber;
-const risultato = document.querySelector('p');
-if (pcNumber > userNumber){
-    risultato.innerHTML = 'Ha vinto il PC';
-}
-else if (pcNumber < userNumber) {
-    risultato.innerHTML = 'Hai Vinto tu';
 
-}
-else {
-    risultato.innerHTML = 'Pareggio';
 
-}
+const myButton = document.querySelector('button');
+
+myButton.addEventListener('click', function(){
+    let dado1 = document.querySelector('.dado-pc');
+    let dado2 = document.querySelector('.dado-utente')
+    dado1.innerHTML = pcNumber;
+    dado2.innerHTML = userNumber;
+    let risultato = document.querySelector('p');
+    if (pcNumber > userNumber){
+        risultato.innerHTML = 'Ha vinto il PC';
+    }
+    else if (pcNumber < userNumber) {
+        risultato.innerHTML = 'Hai Vinto tu';
+
+    }
+    else {
+        risultato.innerHTML = 'Pareggio';
+
+    }
+})
